@@ -18,9 +18,9 @@ public:
 	int error;
 	void init();
 	void close();
-
-private:
 	GLFWwindow* window;
+private:
+
 };
 
 #endif /* ENGINE_H_ */

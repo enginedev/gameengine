@@ -8,10 +8,9 @@
 #include "engine.h"
 
 
-
 void engine::init(){
-	if (!glfwInit()) {
-		std::cout << "failure" << std::endl;
+	if(!glfwInit()) {
+		error=-1;
 	}
 #ifdef __APPLE__
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -24,9 +23,25 @@ void engine::init(){
 	const GLFWvidmode* videomode = glfwGetVideoMode(monitor);
 	this->window = glfwCreateWindow(videomode->width/3*2, videomode->height/3*2, "Hello World", NULL, NULL);
 
+	if(!window){
+	        glfwTerminate();
+	        error=-1;
+	}
+
+	glfwMakeContextCurrent(window);
+
+	glewExperimental = GL_TRUE;
+	glewInit();
+
+	// optional
+	glEnable(GL_DEPTH_TEST);
+	glDepthFunc(GL_LESS);
+
+
 }
 
 void engine::close(){
-
+	glfwTerminate();
+	exit(1);	// just for debug
 }
 
