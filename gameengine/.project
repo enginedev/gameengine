@@ -24,4 +24,16 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/lib/apple/libGLEW.a</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/usr/local/lib/libGLEW.a</locationURI>
+		</link>
+		<link>
+			<name>src/lib/apple/libglfw3.a</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/usr/local/lib/libglfw3.a</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
