@@ -12,6 +12,7 @@
 //using namespace std;
 
 int main() {
+	std::cout<<"lol"<<std::endl;
 	engine e;
 	e.init();
 
